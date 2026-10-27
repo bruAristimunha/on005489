@@ -1,4 +1,8 @@
 1.0.4 2026-10-22
+  - Standardize 73 existing iEEGCoordinateSystem tokens from MNI152NLin6ASym to
+    the BIDS enum spelling MNI152NLin6Asym. No coordinate transformation, units, electrode-table
+    values or signal changes; original JSON bytes archived in sourcedata/coordinate-system-token-originals.tar.gz.
+    This spelling repair does not independently verify the source registration/template provenance.
   - channels.tsv of 2 recordings = the data-file header channel list (name, order, count; matched by name): 0 rows renamed to the header name, 0 rows added, 2 rows removed (kept in sourcedata/channels-removed-2026-10-18/), 0 files reordered. Before, mne_bids could not apply channels.tsv to these files (count or name mismatch).
   - README: section 'Channel names follow the data headers'.
 
